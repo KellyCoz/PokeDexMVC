@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catch_Them_All.Models
+namespace PokeDex.Models
 {
     public class Type
     {

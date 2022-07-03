@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Catch_Them_All.Models;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using PokeDex.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catch_Them_All.Controllers
+namespace PokeDex.Controllers
 {
     public class CharacterController : Controller
     {
@@ -25,8 +26,10 @@ namespace Catch_Them_All.Controllers
         }
 
         //ReadAll action
+        [HttpGet]
         public IActionResult Index()
         {
+            ViewData["Title"] = "Pokemon";
             //convert our db set into a list to return to our view
             var model = _context.Characters.ToList();
             return View(model);
@@ -37,9 +40,10 @@ namespace Catch_Them_All.Controllers
             var model = _context.Characters.Where(e => e.IsActive).ToList();
             return View(model);
         }
-    
+        [Route("Character/{name}/Details")]
         public IActionResult Details(string name)
         {
+            ViewData["Title"] = name;
             //Make sure we get the correct character back, we return only a character with a matching Name
             var model = _context.Characters.FirstOrDefault(e=>e.Name == name);
             return View(model);

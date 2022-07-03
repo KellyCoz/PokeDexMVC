@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Catch_Them_All.Models
+namespace PokeDex.Models
 {
     public class ApplicationDBContext : DbContext
     {

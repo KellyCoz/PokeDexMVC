@@ -1,4 +1,4 @@
-﻿using Catch_Them_All.Models;
+﻿using PokeDex.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catch_Them_All.Controllers
+namespace PokeDex.Controllers
 {
     public class HomeController : Controller
     {

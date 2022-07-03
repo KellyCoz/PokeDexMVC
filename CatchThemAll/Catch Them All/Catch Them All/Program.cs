@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catch_Them_All
+namespace PokeDex
 {
     public class Program
     {

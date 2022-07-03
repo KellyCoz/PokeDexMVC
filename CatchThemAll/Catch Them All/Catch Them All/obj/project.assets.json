@@ -7529,9 +7529,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\Catch Them All.csproj",
-      "projectName": "Catch Them All",
-      "projectPath": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\Catch Them All.csproj",
+      "projectUniqueName": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\PokeDex.csproj",
+      "projectName": "PokeDex",
+      "projectPath": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\PokeDex.csproj",
       "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\obj\\",
       "projectStyle": "PackageReference",

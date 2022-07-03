@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9PVcJW0R4Phk+RtT9uH5iS29lIgiWniiUPaHhsFzbhY1hcDz7aQumaGDiVkAFVRZAvZyYkjRyMfjKoK11LUQnw==",
+  "dgSpecHash": "Zxqmxnw82nfKUZvlku61zjbKxBFqgG1Rkab2R4SDe6gGnQAIUAizMrSvweV4Yl2fNeBi6N1opGfaQHiVi/7qIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\Catch Them All.csproj",
+  "projectFilePath": "C:\\Users\\kelly\\source\\repos\\CatchThemAll\\Catch Them All\\Catch Them All\\PokeDex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kelly\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kelly\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

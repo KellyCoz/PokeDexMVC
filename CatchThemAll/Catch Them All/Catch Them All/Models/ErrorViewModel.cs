@@ -1,6 +1,6 @@
 using System;
 
-namespace Catch_Them_All.Models
+namespace PokeDex.Models
 {
     public class ErrorViewModel
     {
