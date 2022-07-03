@@ -1,0 +1,8 @@
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.csproj.AssemblyReference.cache
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.AssemblyInfoInputs.cache
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.AssemblyInfo.cs
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.csproj.CoreCompileInputs.cache
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.RazorAssemblyInfo.cache
+C:\Users\kelly\source\repos\CatchThemAll\Catch Them All\Catch Them All\obj\Debug\net5.0\Catch Them All.RazorAssemblyInfo.cs
