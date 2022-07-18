@@ -27,24 +27,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemons/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vbnNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemon/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemons/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vbnNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemon/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemons/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vbnNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemon/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemons/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vbnNcRWRpdC5jc2h0bWw=
+[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemon/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemons/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vbnNcSW5kZXguY3NodG1s
+[C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Pokemon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kelly/source/repos/PokeDexMVC/PokeDexMVC/Views/Shared/Error.cshtml]

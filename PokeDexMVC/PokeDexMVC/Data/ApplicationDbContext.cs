@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PokeDexMVC.Models;
 
 namespace PokeDexMVC.Data
 {
@@ -18,7 +17,11 @@ namespace PokeDexMVC.Data
             {
                 Id = Guid.Parse("249a4472-9ef1-4a20-9d77-dfb66994bca2"),
                 Name = "Pikachu",
-                Type = "Electric"
+                Type = "Electric",
+                StronglyAttacks = "",
+                StronglyDefends = "",
+                WeaklyAttacks = "",
+                WeaklyDefends = ""
             });
             
             base.OnModelCreating(modelBuilder);

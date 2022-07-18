@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PokeDexMVC.Data;
-using PokeDexMVC.Models;
 
 namespace PokeDexMVC.Controllers
 {
