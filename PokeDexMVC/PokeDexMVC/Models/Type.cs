@@ -11,6 +11,6 @@ namespace PokeDexMVC.Models
         public string Name { get; set; }
 
         [JsonProperty("damage_relations")]
-        public List<DamageRelations> DamageRelations { get; set; }
+        public DamageRelations DamageRelations { get; set; }
     }
 }

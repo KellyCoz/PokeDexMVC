@@ -1,4 +1,4 @@
-﻿namespace PokeDexMVC
+﻿namespace PokeDexMVC.Models
 {
     public class Pokemon
     {
@@ -9,5 +9,11 @@
         public string WeaklyAttacks { get; set; }
         public string StronglyDefends { get; set; }
         public string WeaklyDefends { get; set; }
+
+        public void MapType(Type type)
+        {
+            StronglyAttacks = type.DamageRelations.Double_damage_to.FirstOrDefault().Name;
+        }
     }
+
 }

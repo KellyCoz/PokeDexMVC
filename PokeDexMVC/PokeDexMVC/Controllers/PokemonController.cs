@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PokeDexMVC.Data;
+using PokeDexMVC.Models;
+
 
 namespace PokeDexMVC.Controllers
 {
@@ -40,7 +42,10 @@ namespace PokeDexMVC.Controllers
             {
                 return NotFound();
             }
-
+            //Call the client to get the information for the types
+            var client = PokeApi.Client();
+            var type = await client.GetTypesAsync(pokemon.Type.ToLower());
+            pokemon.MapType(type);
             return View(pokemon);
         }
 
