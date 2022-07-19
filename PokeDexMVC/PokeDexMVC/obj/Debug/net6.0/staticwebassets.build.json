@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cGWzLrfuYTBsKGVrEhV/1Ypf6YQaFvMt096c6+ahhh4=",
+  "Hash": "gYbDTVeOW0iozhEGuv8XvRLhjhOMmUoPIgCVEBtthVU=",
   "Source": "PokeDexMVC",
   "BasePath": "_content/PokeDexMVC",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\kelly\\source\\repos\\PokeDexMVC\\PokeDexMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PokeDexMVC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\kelly\\source\\repos\\PokeDexMVC\\PokeDexMVC\\wwwroot\\Content\\pikachu.png",
+      "SourceId": "PokeDexMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kelly\\source\\repos\\PokeDexMVC\\PokeDexMVC\\wwwroot\\",
+      "BasePath": "_content/PokeDexMVC",
+      "RelativePath": "Content/pikachu.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Content\\pikachu.png"
     },
     {
       "Identity": "C:\\Users\\kelly\\source\\repos\\PokeDexMVC\\PokeDexMVC\\wwwroot\\css\\site.css",

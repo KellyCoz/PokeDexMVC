@@ -42,10 +42,14 @@ namespace PokeDexMVC.Controllers
             {
                 return NotFound();
             }
-            //Call the client to get the information for the types
+            //Call the client
             var client = PokeApi.Client();
+            var pokemonResult = await client.GetPokemonAsync(pokemon.Name.ToLower());
+            pokemon.GetTypes(pokemonResult);
+
             var type = await client.GetTypesAsync(pokemon.Type.ToLower());
-            pokemon.MapType(type);
+            //invoke 'MapType' from the Pokemon class on the pokemon displayed, using the pokemon's type
+            pokemon.MapType(type); //this method is in the Pokemon class.
             return View(pokemon);
         }
 
@@ -60,7 +64,7 @@ namespace PokeDexMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,elementType")] Pokemon pokemon)
+        public async Task<IActionResult> Create([Bind("Id,Name,Type")] Pokemon pokemon)
         {
             if (ModelState.IsValid)
             {
