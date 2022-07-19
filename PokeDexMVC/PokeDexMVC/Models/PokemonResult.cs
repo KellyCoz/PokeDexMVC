@@ -7,6 +7,6 @@ namespace PokeDexMVC.Models
         [JsonProperty("name")]
         public string? Name { get; set; }
         [JsonProperty("types")]
-        public List<PokemonType>? Types { get; set; }
+        public List<Slot> Slots { get; set; }
     }
 }

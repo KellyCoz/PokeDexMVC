@@ -15,7 +15,7 @@ namespace PokeDexMVC.Models
 
         public void GetTypes(PokemonResult pokemonResult)
         {
-            Type = pokemonResult.Types.FirstOrDefault().Name;
+            Type = pokemonResult.Slots.FirstOrDefault().Type.Name;
         }
         public void MapType(OpponentType type)
         {
