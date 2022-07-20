@@ -6,7 +6,7 @@ namespace PokeDexMVC.Models
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
-        public String? Type { get; set; }
+        public string? Type { get; set; }
         //the following properties are nullable and not required to create a pokemon
         public string? StronglyAttacks { get; set; }
         public string? WeaklyAttacks { get; set; }
@@ -17,34 +17,106 @@ namespace PokeDexMVC.Models
         {
             Type = pokemonResult.Slots.FirstOrDefault().Type.Name;
         }
-        public List<Opponent> GetListOfStrongAttack (OpponentType type)
-        {
-            List<Opponent> LofStronglyAttacks = type.DamageRelations.Double_damage_to;
-            return LofStronglyAttacks;
 
-        }
-        
         public string GetStrongAttackType(OpponentType type)
         {
             //access the type object returned by the API, and follow the layers all the way down to the attribute we want to return 
             //in this case, the name stored in the specific levels of damage relations (double_damage_to, no_damage_to, etc.)
-            string sAttacks = type.DamageRelations.Double_damage_to.FirstOrDefault()?.Name;
-            return sAttacks;
 
+            int cnt = type.DamageRelations.Double_damage_to.Count();
+            int i = 0;
+            string sAttacks = "";
+            while (i < cnt)
+            {
+                if (i == 0)
+                {
+                    sAttacks = type.DamageRelations.Double_damage_to[i].Name;
+                }
+                else
+                {
+                    sAttacks = sAttacks + ", " + type.DamageRelations.Double_damage_to[i].Name;
+                }
+                i++;
+            }
+
+            return sAttacks;
         }
+        //public string GetConcatenated(OpponentType type, int num)
+        //{
+        //    num = type.DamageRelations.Double_damage_to.Count();
+        //    int i = 0;
+        //    string opponents = "";
+        //    while (i < num)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            opponents = type.DamageRelations.Double_damage_to[i].Name;
+        //        }
+        //        else
+        //        {
+        //            opponents = opponents + ", " + type.DamageRelations.Double_damage_to[i].Name;
+        //        }
+        //        i++;
+        //    }
+        //    return opponents;
+        //   }
         public string GetWeakAttackType(OpponentType type)
         {
-            string wAttacks = type.DamageRelations.No_damage_to.FirstOrDefault()?.Name; 
+            int cnt = type.DamageRelations.No_damage_to.Count();
+            int i = 0;
+            string wAttacks = "";
+            while (i < cnt)
+            {
+                if (i == 0)
+                {
+                    wAttacks = type.DamageRelations.No_damage_to[i].Name;
+                }
+                else
+                {
+                    wAttacks = wAttacks + ", " + type.DamageRelations.No_damage_to[i].Name;
+                }
+                i++;
+            }
+
             return wAttacks;
         }
         public string GetStrongDefendType(OpponentType type)
         {
-            string sDefends = type.DamageRelations.No_damage_from.FirstOrDefault()?.Name;
+            int cnt = type.DamageRelations.No_damage_from.Count();
+            int i = 0;
+            string sDefends = "";
+            while (i < cnt)
+            {
+                if (i == 0)
+                {
+                    sDefends = type.DamageRelations.No_damage_from[i].Name;
+                }
+                else
+                {
+                    sDefends = sDefends + ", " + type.DamageRelations.No_damage_from[i].Name;
+                }
+                i++;
+            }
+
             return sDefends;
         }
         public string GetWeakDefendType(OpponentType type)
         {
-            string wDefends = type.DamageRelations.Double_damage_from.FirstOrDefault()?.Name;
+            int cnt = type.DamageRelations.Double_damage_from.Count();
+            int i = 0;
+            string wDefends = "";
+            while (i < cnt)
+            {
+                if (i == 0)
+                {
+                    wDefends = type.DamageRelations.Double_damage_from[i].Name;
+                }
+                else
+                {
+                    wDefends = wDefends + ", " + type.DamageRelations.Double_damage_from[i].Name;
+                }
+                i++;
+            }
             return wDefends;
         }
 

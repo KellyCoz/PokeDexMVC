@@ -5,6 +5,8 @@ namespace PokeDexMVC.Models
 {
     public class OpponentType : PokemonType
     {
+
+        
         [JsonProperty("id")]
         public int Id { get; set; }
 
