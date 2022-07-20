@@ -17,18 +17,37 @@ namespace PokeDexMVC.Models
         {
             Type = pokemonResult.Slots.FirstOrDefault().Type.Name;
         }
-        public void MapType(OpponentType type)
+        public List<Opponent> GetListOfStrongAttack (OpponentType type)
+        {
+            List<Opponent> LofStronglyAttacks = type.DamageRelations.Double_damage_to;
+            return LofStronglyAttacks;
+
+        }
+        
+        public string GetStrongAttackType(OpponentType type)
         {
             //access the type object returned by the API, and follow the layers all the way down to the attribute we want to return 
             //in this case, the name stored in the specific levels of damage relations (double_damage_to, no_damage_to, etc.)
-            StronglyAttacks = type.DamageRelations.Double_damage_to.FirstOrDefault()?.Name;
-           
-            WeaklyAttacks = type.DamageRelations.No_damage_to.FirstOrDefault()?.Name;
-          
-            StronglyDefends = type.DamageRelations.No_damage_from.FirstOrDefault()?.Name;
-            
-            WeaklyDefends = type.DamageRelations.Double_damage_from.FirstOrDefault()?.Name;
+            string sAttacks = type.DamageRelations.Double_damage_to.FirstOrDefault()?.Name;
+            return sAttacks;
+
         }
+        public string GetWeakAttackType(OpponentType type)
+        {
+            string wAttacks = type.DamageRelations.No_damage_to.FirstOrDefault()?.Name; 
+            return wAttacks;
+        }
+        public string GetStrongDefendType(OpponentType type)
+        {
+            string sDefends = type.DamageRelations.No_damage_from.FirstOrDefault()?.Name;
+            return sDefends;
+        }
+        public string GetWeakDefendType(OpponentType type)
+        {
+            string wDefends = type.DamageRelations.Double_damage_from.FirstOrDefault()?.Name;
+            return wDefends;
+        }
+
     }
 
 }

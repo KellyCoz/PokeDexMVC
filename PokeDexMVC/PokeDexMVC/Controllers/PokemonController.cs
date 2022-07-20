@@ -49,7 +49,10 @@ namespace PokeDexMVC.Controllers
 
             var type = await client.GetTypesAsync(pokemon.Type.ToLower());
             //invoke 'MapType' from the Pokemon class on the pokemon displayed, using the pokemon's type
-            pokemon.MapType(type); //this method is in the Pokemon class.
+            pokemon.StronglyAttacks = pokemon.GetStrongAttackType(type);
+            pokemon.StronglyDefends = pokemon.GetStrongDefendType(type);
+            pokemon.WeaklyAttacks = pokemon.GetWeakAttackType(type);
+            pokemon.WeaklyDefends = pokemon.GetWeakDefendType(type);
             return View(pokemon);
         }
 
