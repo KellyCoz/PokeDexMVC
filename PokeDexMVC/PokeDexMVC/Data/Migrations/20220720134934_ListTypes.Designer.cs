@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PokeDexMVC.Data;
 
@@ -11,9 +12,10 @@ using PokeDexMVC.Data;
 namespace PokeDexMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220720134934_ListTypes")]
+    partial class ListTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,16 +236,13 @@ namespace PokeDexMVC.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PrimaryType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondaryType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("StronglyAttacks")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StronglyDefends")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Types")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WeaklyAttacks")
@@ -261,10 +260,9 @@ namespace PokeDexMVC.Data.Migrations
                         {
                             Id = new Guid("249a4472-9ef1-4a20-9d77-dfb66994bca2"),
                             Name = "Pikachu",
-                            PrimaryType = "Electric",
-                            SecondaryType = "normal",
                             StronglyAttacks = "",
                             StronglyDefends = "",
+                            Types = "Electric",
                             WeaklyAttacks = "",
                             WeaklyDefends = ""
                         });

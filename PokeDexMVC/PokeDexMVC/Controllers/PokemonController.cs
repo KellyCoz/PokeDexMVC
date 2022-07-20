@@ -47,12 +47,26 @@ namespace PokeDexMVC.Controllers
             var pokemonResult = await client.GetPokemonAsync(pokemon.Name.ToLower());
             pokemon.GetTypes(pokemonResult);
 
-            var type = await client.GetTypesAsync(pokemon.Type.ToLower());
-            //invoke 'MapType' from the Pokemon class on the pokemon displayed, using the pokemon's type
-            pokemon.StronglyAttacks = pokemon.GetStrongAttackType(type);
-            pokemon.StronglyDefends = pokemon.GetStrongDefendType(type);
-            pokemon.WeaklyAttacks = pokemon.GetWeakAttackType(type);
-            pokemon.WeaklyDefends = pokemon.GetWeakDefendType(type);
+            var primaryType = await client.GetTypesAsync(pokemon.PrimaryType.ToLower());
+
+
+            if (pokemon.SecondaryType != "none")
+            {
+                var secondaryType = await client.GetTypesAsync(pokemon.SecondaryType.ToLower());
+                //invoke 'MapType' from the Pokemon class on the pokemon displayed, using the pokemon's type
+                pokemon.StronglyAttacks = pokemon.GetStrongAttackType(primaryType) + ", " + pokemon.GetStrongAttackType(secondaryType);
+                pokemon.StronglyDefends = pokemon.GetStrongDefendType(primaryType) + ", " + pokemon.GetStrongDefendType(secondaryType);
+                pokemon.WeaklyAttacks = pokemon.GetWeakAttackType(primaryType) + ", " + pokemon.GetWeakAttackType(secondaryType);
+                pokemon.WeaklyDefends = pokemon.GetWeakDefendType(primaryType) + ", " + pokemon.GetWeakDefendType(secondaryType);
+            }
+            else
+            {
+                pokemon.StronglyAttacks = pokemon.GetStrongAttackType(primaryType);
+                pokemon.StronglyDefends = pokemon.GetStrongDefendType(primaryType);
+                pokemon.WeaklyAttacks = pokemon.GetWeakAttackType(primaryType);
+                pokemon.WeaklyDefends = pokemon.GetWeakDefendType(primaryType);
+
+            }
             return View(pokemon);
         }
 

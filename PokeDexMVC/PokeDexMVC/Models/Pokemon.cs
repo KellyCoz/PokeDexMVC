@@ -6,16 +6,37 @@ namespace PokeDexMVC.Models
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
-        public string? Type { get; set; }
+        public string? PrimaryType { get; set; }
+        public string? SecondaryType { get; set; }
         //the following properties are nullable and not required to create a pokemon
         public string? StronglyAttacks { get; set; }
         public string? WeaklyAttacks { get; set; }
         public string? StronglyDefends { get; set; }
         public string? WeaklyDefends { get; set; }
 
+        //public void GetTypes(PokemonResult pokemonResult)
+        //{
+          //  PrimaryType = pokemonResult.Slots.FirstOrDefault().Type.Name;
+        //}
+
         public void GetTypes(PokemonResult pokemonResult)
         {
-            Type = pokemonResult.Slots.FirstOrDefault().Type.Name;
+            int cnt = pokemonResult.Slots.Count();
+            int i = 0;
+            SecondaryType = "none";
+            while(i<cnt)
+            {
+                if(i==0)
+                {
+                    PrimaryType = pokemonResult.Slots[i].Type.Name;
+                }
+                if(i==1)
+                {
+                    SecondaryType = pokemonResult.Slots[i].Type.Name;
+                }
+                i++;
+
+            }
         }
 
         public string GetStrongAttackType(OpponentType type)
