@@ -8,7 +8,9 @@ To run this app, please view the package management console and 'add-migration i
 
 Launch the app by clicking 'Run'.
 
-The landing page/home page will display a picture of Pikachu and the 'Gotta Catch Them All' phrase. The app is preloaded with seed data so when you click the "View Your Pokemon" link at the top, you will be directed to a display of the current pokemon stored in the database. On your first pass, this will only be Pikachu. From here, you can view the Pokemon's details by click the "Details" link. This will render four types of opponent information: 
+The landing page/home page will display a picture of Pikachu and the 'Gotta Catch Them All' phrase. The app is preloaded with seed data so when you click the "View Your Pokemon" link at the top, you will be directed to a display of the current pokemon stored in the database. On your first pass, this will only be Pikachu. From here, you can view the Pokemon's details by click the "Details" link. 
+
+### Definitions/Data:  
     1.) Your current Pokemon's Primary Type 
     2.) Your Pokemon's secondary type 
     3.) Strongly Attacks: a list of the Pokemon that your current Pokemon will delivery high damage 
@@ -20,13 +22,12 @@ Returning back to the list will display your Pokemon name again. To add more Pok
 
 Back on the "View Your Pokemon" you also have the option to edit or delete a Pokemon entry.
 
-Project requirements met:
+### Project requirements met:
 
-Required:
-    1.) There are at least 3 methods with at least one returning and usig a value. In the Pokemon class there are 4 methods which returns values called from the 
-        Pokemon Controller and displayed on the 'Details' page.
-    2.) Create an instance of an object and fill it with data: I created a Pokemon instance and filled it with the name Pikachu and left the remaining entries               blank.
-Features (3 Required):
+#### Required:
+    1.) There are at least 3 methods with at least one returning and usig a value. In the Pokemon class there are 4 methods which returns values called from the Pokemon Controller and displayed on the 'Details' page.
+    2.) Create an instance of an object and fill it with data: I created a Pokemon instance and filled it with the name Pikachu and left the remaining entries       blank.
+#### Features (3 Required):
     1.) One class inherits from another. The OpponentType class inherits from the PokemonType class.
     2.) This App connects to and reads in information from the PokeApi. This is defined in the PokemonClient.cs
-    3.) This App is an MVC App built with EF. It reads and writes data to a database and displays the values in the app. Per Ernesto, this is a feature that would           fulfill a Features list requirement.
+    3.) This App is an MVC App built with EF. It reads and writes data to a database and displays the values in the app. Per Ernesto, this is a feature that would   fulfill a Features list requirement.
